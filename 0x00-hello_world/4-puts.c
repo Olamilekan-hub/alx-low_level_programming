@@ -6,11 +6,11 @@
  *
  * puts: this function prints out the char in the string()
  *
- * return: returns 0 at the end
+ * Return - returns the value 0 for the main function
  */
 int main(void)
 {
-	puts("\"Programming is like building a multilingual puzzle\n");
+	puts("Programming is like building a multilingual puzzle\n");
 
 	return (0);
 }
