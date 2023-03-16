@@ -13,8 +13,6 @@ int main(void)
 	int i;
 	long int li;
 	long long int l;
-	double d;
-	long double ld;
 	float f;
 
 	/* Prints a message to the standard output */
@@ -22,8 +20,6 @@ int main(void)
 	printf("size of an int: %lu bytes(s)\n", (unsigned long)sizeof(i));
 	printf("size of a long int: %lu bytes(s)\n", (unsigned long)sizeof(li));
 	printf("size of a long long int: %lu bytes(s)\n", (unsigned long)sizeof(l));
-	printf("size of a double: %lu byte(s)\n", (unsigned long)sizeof(d));
-	printf("size of a long double: %lu byte(s)\n", (unsigned long)sizeof(d));
 	printf("size of a float: %lu bytes(s)\n", (unsigned long)sizeof(f));
 	return (0);
 }
