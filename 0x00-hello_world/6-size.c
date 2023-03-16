@@ -10,7 +10,7 @@
 int main(void)
 {
 	/* Prints a message to the standard output */
-	printf("The size of a char is: %u byte(s)\n", (unsigned int)(sizeof(char)));
+	printf("size of a char: %u byte(s)\n", (unsigned int)(sizeof(char)));
 	printf("size of an int: %u bytes(s)\n", (unsigned int)(sizeof(int)));
 	printf("size of a long int: %u bytes(s)\n", (unsigned int)(sizeof(long int)));
 	printf("size of a long long int: %u bytes(s)\n", (unsigned int)(sizeof(long long int)));
