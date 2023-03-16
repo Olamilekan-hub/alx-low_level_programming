@@ -18,12 +18,12 @@ int main(void)
 	float f;
 
 	/* Prints a message to the standard output */
-	printf("size of a char: %u byte(s)\n", (unsigned int)sizeof(c));
-	printf("size of an int: %u bytes(s)\n", (unsigned int)sizeof(i));
-	printf("size of a long int: %u bytes(s)\n", (unsigned int)sizeof(li));
-	printf("size of a long long int: %u bytes(s)\n", (unsigned int)sizeof(l));
-	printf("size of a double: %u byte(s)\n", (unsigned int)sizeof(d));
-	printf("size of a long double: %u byte(s)\n", (unsigned int)sizeof(d));
-	printf("size of a float: %u bytes(s)\n", (unsigned int)sizeof(f));
+	printf("size of a char: %lu byte(s)\n", (unsigned long)sizeof(c));
+	printf("size of an int: %lu bytes(s)\n", (unsigned long)sizeof(i));
+	printf("size of a long int: %lu bytes(s)\n", (unsigned long)sizeof(li));
+	printf("size of a long long int: %lu bytes(s)\n", (unsigned long)sizeof(l));
+	printf("size of a double: %lu byte(s)\n", (unsigned long)sizeof(d));
+	printf("size of a long double: %lu byte(s)\n", (unsigned long)sizeof(d));
+	printf("size of a float: %lu bytes(s)\n", (unsigned long)sizeof(f));
 	return (0);
 }
