@@ -1,16 +1,16 @@
 #include <stdio.h>
 
 /**
- * Function `main` is a 'void' function
- * it returns int 0
+ * main - This is a 'void' function and als represents
+ * the begining of the file.
  *
- * the function `puts` prints out the char in the string ()
+ * puts: this function prints out the char in the string()
  *
+ * return: returns 0 at the end
  */
-
 int main(void)
 {
-	puts("\"Programming is like building a multilingual puzzle.\n");
+	puts("\"Programming is like building a multilingual puzzle\n");
 
 	return (0);
 }
