@@ -1,15 +1,15 @@
 #include <stdio.h>
 
 /**
- * main - This is a 'void' function and als represents
- * the begining of the file.
+ * main - Entry point of the program
  *
- * @puts: this function prints out the char in the string()
+ * Description: This function prints a message to the standard output.
  *
- * @Return the value 0 for the main function
+ * Return: Always 0 (success)
  */
 int main(void)
 {
+	/* Print a message to the standard output */
 	puts("Programming is like building a multilingual puzzle\n");
 
 	return (0);
