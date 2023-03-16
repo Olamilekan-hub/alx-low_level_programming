@@ -1,9 +1,2 @@
 #!/bin/bash
-
-# store tha name of the file in a variable
-
-CFILE=Hello.c
-
-# Run the file through C preprocessor only
-
-gcc -e $CFILE -o c
+export CFILE=Hello.c | gcc -e $CFILE -o c
