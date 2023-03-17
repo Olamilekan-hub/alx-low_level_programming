@@ -10,7 +10,6 @@
 int main(void)
 {
 	int A;
-	int B;
 	/**
 	 * while: this fucntion is used to loop the program till a condition is met
 	 *
@@ -20,10 +19,6 @@ int main(void)
 	for (A = 'a'; A <= 'z'; A++)
 	{
 		putchar(A);
-	}
-	for (B = 'A'; B <= 'Z'; B++)
-	{
-		putchar(B);
 	}
 	putchar('\n');
 	return (0);
