@@ -12,7 +12,7 @@ int main(void)
 	int A;
 	int B;
 	/**
-	 * while: this fucntion is used to loop the program till a condition is met
+	 * for: this fucntion is used to loop the program till a condition is met
 	 *
 	 * putchar is used to print a single char to the std output
 	 *
