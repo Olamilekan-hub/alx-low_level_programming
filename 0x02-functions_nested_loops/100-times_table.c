@@ -24,14 +24,7 @@ void print_times_table(int n)
 				_putchar(' ');
 			if (pro < 100)
 				_putchar(' ');
-			if (pro / 10 == 0)
-			{
-				_putchar(pro / 10);
-			}
-			else 
-			{
-				_putchar(pro / 10 + '0');
-			}
+			_putchar(pro / 10 + '0');
 			_putchar(pro % 10 + '0');
 		}
 		_putchar('\n');
