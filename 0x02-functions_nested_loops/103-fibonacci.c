@@ -1,34 +1,23 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include "main.h"
 
-#define N 4000
-/**
- * main - entry of the program
- *
- * Return: always 0
- *
- */
+#define N 4000000
+
 int main(void)
 {
-	int sum = 0;
-	long int fib[N];
-	int i;
+    int sum = 0;
+    int a = 1, b = 2, c;
 
-	fib[0] = 1;
-	fib[1] = 2;
+    while (b <= N) {
+        if (b % 2 == 0) {
+            sum += b;
+        }
+        c = a + b;
+        a = b;
+        b = c;
+    }
 
-	for (i = 2; i < N; i++)
-	{
-		fib[i] = fib[i - 1] + fib[i - 2];
-	}
-	for (i = 0; i < N; i++)
-	{
-		if (fib[i] % 2 == 0 && fib[i] < N)
-		{
-			sum = sum + fib[i];
-		}
-	}
-	printf("%d\n", sum);
-	return (0);
+    printf("%d\n", sum);
+
+    return 0;
 }
+
