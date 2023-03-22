@@ -19,11 +19,11 @@ void print_times_table(int n)
 		{
 			if (col == 0)
 			{
-				printf("%*d", width, row * col);
+				printf("%d", row * col);
 			}
 			else
 			{
-				printf(", %*d", width, row * col);
+				printf(",%*d", width, row * col);
 			}
 		}
 		printf("\n");
