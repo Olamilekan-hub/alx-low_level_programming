@@ -8,6 +8,7 @@
 void print_times_table(int n)
 {
 	int row, col;
+	int width = 4;
 
 	if (n < 0 || n > 15)
 		return;
@@ -18,11 +19,11 @@ void print_times_table(int n)
 		{
 			if (col == 0)
 			{
-				printf("%d", row * col);
+				printf("%*d", width, row * col);
 			}
 			else
 			{
-				printf(",  %d", row * col);
+				printf(", %*d", width, row * col);
 			}
 		}
 		printf("\n");
