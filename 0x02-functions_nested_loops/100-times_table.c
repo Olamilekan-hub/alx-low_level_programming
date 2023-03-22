@@ -22,7 +22,7 @@ void print_times_table(int n)
 			}
 			else
 			{
-				printf(", %d", row * col);
+				printf(",  %d", row * col);
 			}
 		}
 		printf("\n");
