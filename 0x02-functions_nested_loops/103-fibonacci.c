@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "main.h"
 
-#define N 4000000
+#define N 4000
 /**
  * main - entry of the program
  *
@@ -24,8 +24,11 @@ int main(void)
 	}
 	for (i = 0; i < N; i++)
 	{
-		sum = sum + i;
-		printf("%d", sum);
+		if (fib[i] % 2 == 0 && fib[i] < N)
+		{
+			sum = sum + fib[i];
+		}
 	}
+	printf("%d\n", sum);
 	return (0);
 }
