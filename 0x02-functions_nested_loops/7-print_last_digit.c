@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "main.h"
+#include <stdlib.h>
 /**
  * print_last_digit - prints the last digit of the value in the integer
  *@r: statement to be check
