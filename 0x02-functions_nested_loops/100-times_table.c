@@ -7,26 +7,24 @@
  */
 void print_times_table(int n)
 {
-	int row, col, pro;
+	int row, col;
 
 	if (n < 0 || n > 15)
 		return;
 
 	for (row = 0; row <= n; row++)
 	{
-		_putchar('0');
-		for (col = 1; col <= n; col++)
+		for (col = 0; col <= n; col++)
 		{
-			pro = row * col;
-			_putchar(',');
-			_putchar(' ');
-			if (pro < 10)
-				_putchar(' ');
-			if (pro < 100)
-				_putchar(' ');
-			_putchar(pro / 10 + '0');
-			_putchar(pro % 10 + '0');
+			if (col == 0)
+			{
+				printf("%d", row * col);
+			}
+			else
+			{
+				printf(", %d", row * col);
+			}
 		}
-		_putchar('\n');
+		printf("\n");
 	}
 }
