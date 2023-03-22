@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
-
-#define N 98
 /**
  * main - entry point of the program
  *
@@ -12,22 +10,20 @@
 int main(void)
 {
 	int i;
-	unsigned long int fib[N];
+	unsigned int fib1 = 1, fib2 = 2, fib_i;
 
-	fib[0] = 1;
-	fib[1] = 2;
+	printf("%d, %d, ", fib1, fib2);
 
-	for (i = 2; i < N; i++)
+	for (i = 3; i <= 98; i++)
 	{
-		fib[i] = fib[i - 1] + fib[i - 2];
-	}
-	for (i = 0; i < N; i++)
-	{
-		printf("%lu", fib[i]);
-		if (i < N - 1)
+		fib_i = fib1 + fib2;
+		printf("%d", fib_i);
+		if (i != 98)
 		{
 			printf(", ");
 		}
+		fib1 = fib2;
+		fib2 = fib_i;
 	}
 	printf("\n");
 	return (0);
