@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 
+int _putchar(char c);
 void print_number(int n);
 
 #endif /* MAIN_H */
