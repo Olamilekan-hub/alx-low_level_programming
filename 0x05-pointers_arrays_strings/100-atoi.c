@@ -12,26 +12,17 @@ int _atoi(char *s)
 {
 	int i = 0;
 	int sign = 1;
-	int res = 0;
+	unsigned int res = 0;
 
 	while (s[i] != '\0')
 	{
 		if (s[i] == '-')
 		{
-			sign = -1;
-		}
-		else if (s[i] == '+')
-		{
-			sign = +1;
+			sign *= -1;
 		}
 		else if (s[i] >= '0' && s[i] <= '9')
 		{
-			if (res > INT_MAX / 10 ||
-					((res == INT_MAX / 10) && (s[i] - '0' > INT_MAX) & 10))
-			{
-				return (sign == 1 ? INT_MAX : INT_MIN);
-			}
-			res = res * 10 + s[i] - '0';
+			res = (res * 10) + (s[i] - '0');
 		}
 		else if (res > 0)
 		{
