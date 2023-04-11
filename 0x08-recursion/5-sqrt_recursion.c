@@ -1,29 +1,5 @@
 #include "main.h"
 
-int sqrt_helper(int n, int low, int high);
-int _sqrt_recursion(int n);
-
-/**
- * _sqrt_recursion - Returns the natural sqrt of a number
- * @n: the number to calc the sqrt
- *
- * Return: The sqrt of n, or -1 if n does not have a natural sqrt
- */
-int _sqrt_recursion(int n)
-{
-	if (n < 0)
-	{
-		return (-1);
-	}
-	else if (n == 0 || n == 1)
-	{
-		return (n);
-	}
-	else
-	{
-		return (sqrt_helper(n, 1, n));
-}
-
 /**
  * sqrt_helper - recursive helper function to find the sqrt of a num
  * @n: the number to calc the sqrt of
@@ -32,27 +8,39 @@ int _sqrt_recursion(int n)
  *
  * Return: the sqrt of n, or -1 if n does not have a natural sqrt
  */
-int sqrt_helper(int n, int low, int  high)
+int sqrt_helper(int num, int  root)
 {
-	int mid;
+	if ((root * root) == num)
+	{
+		return (root);
+	}
+	if (root == num / 2)
+	{
+		return (-1);
+	}
 
-	if (high < low)
+	return  (sqrt_helper(num, root + 1));
+}
+
+/**
+ * _sqrt_recursion - Returns the natural sqrt of a number
+ * @n: the number to calc the sqrt
+ *
+ * Return: the sqrt of n, or -1 if n does not have a natural sqrt
+ */
+int _sqrt_recursion(int n)
+{
+	int root = 0;
+
+	if (n < 0)
 	{
 		return (-1);
 	}
 	
-	mid = (low + high) / 2;
+	if (n == 1)
+	{
+		return (1);
+	}
 	
-	if (mid * mid == n)
-	{
-		return (mid);
-	}
-	else if (mid * mid > n)
-	{
-		return (sqrt_helper(n, low, mid -1));
-	}
-	else
-	{
-	return  (sqrt_helper(n, mid +1, high));
-	}
+	return (sqrt_helper(n, root));
 }
