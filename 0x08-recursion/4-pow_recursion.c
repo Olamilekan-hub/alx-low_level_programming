@@ -4,7 +4,7 @@
  * @x: intger to be multiply
  * @y: integer to be raised
  *
- * return: value of the power an integer to an integer
+ * Return: value of the power an integer to an integer
  */
 int _pow_recursion(int x, int y)
 {
@@ -14,10 +14,11 @@ int _pow_recursion(int x, int y)
 	}
 	else if (y < 0)
 	{
-		return (1 / (_pow_recursion(x, -y) * x));
+		return (-1);
 	}
 	else
 	{
 		return (x * _pow_recursion(x, y - 1));
 	}
+	return (x);
 }
