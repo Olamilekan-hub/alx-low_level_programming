@@ -2,11 +2,11 @@
 
 /**
  * sqrt_helper - recursive helper function to find the sqrt of a num
- * @n: the number to calc the sqrt of
- * @low: The lowest possible value for the sqrt
- * @high: The hihgest possible value for the sqrt
+ * @num: The number to find the  the sqrt of
+ * @root: the root to be tested
  *
- * Return: the sqrt of n, or -1 if n does not have a natural sqrt
+ * Return: if the number has a natural square root - the square root.
+ *		if the number does not have a natural square root - (-1)
  */
 int sqrt_helper(int num, int  root)
 {
@@ -36,11 +36,9 @@ int _sqrt_recursion(int n)
 	{
 		return (-1);
 	}
-	
 	if (n == 1)
 	{
 		return (1);
 	}
-	
 	return (sqrt_helper(n, root));
 }
