@@ -21,7 +21,7 @@ int _sqrt_recursion(int n)
 	}
 	else
 	{
-		return (sqrt_helper(n, 0, n));
+		return (sqrt_helper(n, 1, n));
 }
 
 /**
@@ -32,17 +32,27 @@ int _sqrt_recursion(int n)
  *
  * Return: the sqrt of n, or -1 if n does not have a natural sqrt
  */
-int sqrt_helper(int low, int  high)
+int sqrt_helper(int n, int low, int  high)
 {
-	if ((high * high) == low)
-	{
-		return (high);
-	}
+	int mid;
 
-	if (high == low  / 2)
+	if (high < low)
 	{
 		return (-1);
 	}
 	
-	return  (sqrt_helper(low, high + 1));
+	mid = (low + high) / 2;
+	
+	if (mid * mid == n)
+	{
+		return (mid);
+	}
+	else if (mid * mid > n)
+	{
+		return (sqrt_helper(n, low, mid -1));
+	}
+	else
+	{
+	return  (sqrt_helper(n, mid +1, high));
+	}
 }
