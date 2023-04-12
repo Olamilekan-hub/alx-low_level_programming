@@ -16,10 +16,6 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-	if (dup == NULL)
-	{
-		return (NULL);
-	}
 	strcpy(dup, str);
 	return (dup);
 	free(str);
