@@ -10,6 +10,25 @@ int get_word_length(char *str);
 char **strtow(char *str);
 
 /**
+ * count_words - count the number of words in a string
+ * @str: the input string
+ *
+ * Return: the number of words in the string
+ */
+int cont_words(char *str)
+{
+	int i, count = 0;
+
+	for (i =0; str[i]; i++)
+	{
+		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
+		{
+			count++;
+		}
+	}
+	return (count);
+}
+/**
  * strtow - splits a string int words
  * @str: the string to split
  *
@@ -49,26 +68,6 @@ char **strtow(char *str)
 	}
 	words[n] = NULL;
 	return (words);
-}
-
-/**
- * count_words - counts the number of words in a string
- * @str: the string to count
- *
- * Return: the number of words in str
- */
-int count_words(char *str)
-{
-	int i, count = 0;
-
-	for (i = 0; str[i]; i++)
-	{
-		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
-		{
-			count++;
-		}
-	}
-		return (count);
 }
 
 /**
