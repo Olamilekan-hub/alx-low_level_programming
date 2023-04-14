@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * free_grind - frees the memory space allocated/reserved by malloc
+ * free_grid - frees the memory space allocated/reserved by malloc
  * @grid: double pointer to the memory to be freed
  * @height: helps loop through the memory
  */
