@@ -4,7 +4,7 @@
 #include <stdlib.h>
 int **alloc_grid(int width, int height);
 /**
- * alloc_grid -returns a pointer to a 2-dimensional array of int
+ * alloc_grid -returns a pointer to a 5-dimensional array of int
  * @width: width of the matrix
  * @height: height of the matrix
  *
