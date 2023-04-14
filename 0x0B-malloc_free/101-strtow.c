@@ -10,7 +10,7 @@ int get_word_length(char *str);
 char **strtow(char *str);
 
 /**
- * count_words - count the number of words in a string
+ * cont_words - count the number of words in a string
  * @str: the input string
  *
  * Return: the number of words in the string
@@ -19,7 +19,7 @@ int cont_words(char *str)
 {
 	int i, count = 0;
 
-	for (i =0; str[i]; i++)
+	for (i = 0; str[i]; i++)
 	{
 		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
 		{
@@ -44,13 +44,21 @@ char **strtow(char *str)
 	{
 		return (NULL);
 	}
+	while (*str ==  ' ')
+	{
+		str++;
+	}
+	if (*str == '\0')
+	{
+		return (NULL);
+	}
 	n = cont_words(str);
-	words = malloc((n +1) * sizeof(char *));
+	words = malloc((n + 1) * sizeof(char *));
 	if (words == NULL)
 	{
 		return (NULL);
 	}
-	for(i = 0, j = 0; i < n; i++)
+	for (i = 0, j = 0; i < n; i++)
 	{
 		while (str[j] == ' ')
 		{
@@ -64,7 +72,7 @@ char **strtow(char *str)
 			return (NULL);
 		}
 		copy_word(words[i], str + j, k);
-		j+= k;
+		j += k;
 	}
 	words[n] = NULL;
 	return (words);
