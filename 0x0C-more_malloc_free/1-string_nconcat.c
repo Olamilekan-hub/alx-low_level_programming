@@ -3,12 +3,13 @@
 #include <stdlib.h>
 #include "main.h"
 /**
- * string_nconcat -
- * @s1:
- * @s2:
- * @n:
+ * string_nconcat - concatenates 2 strings up to a certain length
+ * @s1: a pointer to the first string
+ * @s2:a pointer to the second string
+ * @n: the maximum number of bytes from s2 to concatenates to s1
  *
- * Return:
+ * Return: returns a pointer to the newly allocated space
+ *			if the function fails it returns NULL
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
