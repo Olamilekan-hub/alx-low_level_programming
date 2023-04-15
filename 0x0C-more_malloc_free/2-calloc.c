@@ -6,6 +6,8 @@
  * _calloc - this function allocates memory for array
  * @nmemb: array of integers
  * @size: number of bytes
+ *
+ * Return: a pointer to the allocated mem. or NULL if it fails
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
@@ -21,5 +23,5 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	}
 	memset(ptr, 0, nmemb * size);
-	return ptr;
+	return (ptr);
 }
