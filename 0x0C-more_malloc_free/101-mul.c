@@ -1,3 +1,4 @@
+#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
@@ -10,25 +11,44 @@
  */
 unsigned int mul(char *num1, char *num2)
 {
-	unsigned int result = 0;
-	int i, j;
+	unsigned int result, *prod;
+	int i, j, len1, len2, carry;
 
-	for (i = 0; num1[i] != '\0'; i++)
+	len1 = strlen(num1);
+	len2 = strlen(num2);
+	prod = calloc(len1 + len2, sizeof(unsigned int));
+	if (prod == NULL)
 	{
-		if (!isdigit(num1[i]))
+		printf("Error\n");
+		exit(98);
+	}
+	for (i = len1 - 1; i >= 0; i--)
+	{
+		carry = 0;
+		for (j = len2 - 1; j >= 0; j--)
 		{
-			printf("Error\n");
-			exit(98);
+			prod[i + j + 1] += (num1[i] - '0') * (num2[j] - '0') + carry;
+			carry = prod[i + j + 1] / 10;
+			prod[i + j + 1] %= 10;
+		}
+		prod[i + j + 1] += carry;
+	}
+	for (i = 0; i < len1 + len2; i++)
+	{
+		if (prod[i] != 0)
+		{
+			break;
 		}
 	}
-	for (j = 0; num2[j] != '\0'; j++)
+	result = 0;
 	{
-		for (j = 0; num2[j] != '\0'; j++)
+		while (i < len1 + len2)
 		{
-			result *= 10;
-			result += (num1[i] - '0') * (num2[j] - '0');
+			result = result * 10 + prod[i];
+			i++;
 		}
 	}
+	free(prod);
 	return (result);
 }
 
