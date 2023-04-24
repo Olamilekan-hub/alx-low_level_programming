@@ -4,12 +4,12 @@
 /**
  * main - PRINTS the opcodes of its own main function
  * @argc: the number of command-line arguments
- * @arv:an array of command-line argument strings
+ * @argv:an array of command-line argument strings
  *
  * Return: 0 (success), 1 on incorrect number of arguments, or
  *		2 on negative number of bytes
  */
- 
+
 int main(int argc, char *argv[])
 {
 	int i = 0, n;
@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 	p = (unsigned char *)main;
 	if (n > 0)
 	{
-		while (i < (n - 1));
+		while (i < (n - 1))
 		{
 			printf("%02hhx ", p[i++]);
 		}
