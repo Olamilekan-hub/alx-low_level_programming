@@ -1,2 +1,2 @@
 #!/bin/bash
-ar rcs libmy.a puts.o islower.o isalpha.o abs.o isupper.o isdigit.o strlen.o strcpy.o atoi.o strcat.o strncat.o strncpy.o strcmp.o memset.o memcpy.o strchr.o strspn.o strpbrk.o strstr.o putchar.o
+ar rcs liball.a 0-isupper.o 0-memset.o 0-strcat.o 100-atoi.o 1-isdigit.o 1-memcpy.o 1-strncat.o 2-strchr.o 2-strlen.o 2-strncpy.o 3-islower.o 3-puts.o 3-strcmp.o 3-strspn.o 4-isalpha.o 4-strpbrk.o 5-strstr.o 6-abs.o 9-strcpy.o _putchar.o
