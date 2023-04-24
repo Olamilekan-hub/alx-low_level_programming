@@ -1,48 +1,55 @@
 #include "variadic_functions.h"
+
+/**
+ * print_all - print anything
+ * 2format: any kind of data
+ *
+ * Return: no value
+ */
+
 void print_all(const char * const format, ...)
 {
 	va_list ap;
-	char *sval;
-	int ival;
-	double dval;
-	int i;
+	char *p;
+	int i = 0;
 
 	va_start(ap, format);
-	for (i = 0; format && format[i]; i++)
+	while (format == NULL)
+	{
+		printf("\n");
+		return;
+	}
+	while (format[i])
 	{
 		switch (format[i])
 		{
 			case 'c':
-				ival = va_arg(ap, int);
-				printf("%c", ival);
+				printf("%c", (char) va_arg(ap, int));
 				break;
 			case 'i':
-				ival = va_arg(ap, int);
-				printf("%d", ival);
+				printf("%d", va_arg(ap, int));
 				break;
 			case 'f':
-				dval = va_arg(ap, double);
-				printf("%f", dval);
+				printf("%f", (float) va_arg(ap, double));
 				break;
 			case 's':
-				sval = va_arg(ap, char *);
-				if (sval == NULL)
+				p = va_arg(ap, char *);
+				if (p == NULL)
 				{
 					printf("(nill)");
 				}
 				else
 				{
-					printf("%s", sval);
+					printf("%s", p);
 				}
 				break;
-			default:
-				break;
 		}
-		if (format[i + 1] && (format[i] == 'c' || format[i] == 'i' ||
+		if (format[(i + 1)] != '\0' && (format[i] == 'c' || format[i] == 'i' ||
 					format[i] == 'f' || format[i] == 's'))
 		{
 			printf(", ");
 		}
+		i++;
 	}
 	va_end(ap);
 	printf("\n");
