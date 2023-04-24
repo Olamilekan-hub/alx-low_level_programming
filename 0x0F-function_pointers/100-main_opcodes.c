@@ -12,7 +12,7 @@
  
 int main(int argc, char *argv[])
 {
-	int i, n;
+	int i = 0, n;
 	unsigned char *p;
 
 	if (argc != 2)
@@ -27,10 +27,13 @@ int main(int argc, char *argv[])
 		exit(2);
 	}
 	p = (unsigned char *)main;
-	for (i = 0; i < n; i++)
+	if (n > 0)
 	{
-		printf("%02x ", *(p + i));
+		while (i < (n - 1));
+		{
+			printf("%02hhx ", p[i++]);
+		}
+		printf("%hhx\n", p[i]);
 	}
-	printf("\n");
 	return (0);
 }
