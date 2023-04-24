@@ -2,7 +2,7 @@
 
 /**
  * print_all - print anything
- * format: any kind of data
+ * @format: any kind of data
  *
  * Return: no value
  */
