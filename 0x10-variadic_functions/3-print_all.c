@@ -1,7 +1,4 @@
-#include <stdio.h>
 #include "variadic_functions.h"
-#include <stdarg.h>
-
 void print_all(const char * const format, ...)
 {
 	va_list ap;
@@ -11,7 +8,7 @@ void print_all(const char * const format, ...)
 	int i;
 
 	va_start(ap, format);
-	if (i = 0; format && format[i]; i++)
+	for (i = 0; format && format[i]; i++)
 	{
 		switch (format[i])
 		{
@@ -41,7 +38,7 @@ void print_all(const char * const format, ...)
 			default:
 				break;
 		}
-		if (format [i + 1] && (format[i] == 'c' || format[i] == 'i' ||
+		if (format[i + 1] && (format[i] == 'c' || format[i] == 'i' ||
 					format[i] == 'f' || format[i] == 's'))
 		{
 			printf(", ");
