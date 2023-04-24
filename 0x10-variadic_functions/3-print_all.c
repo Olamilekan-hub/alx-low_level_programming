@@ -34,14 +34,12 @@ void print_all(const char * const format, ...)
 				break;
 			case 's':
 				p = va_arg(ap, char *);
-				if (p == NULL)
-				{
-					printf("(nill)");
-				}
-				else
+				if (p != NULL)
 				{
 					printf("%s", p);
+					break;
 				}
+				printf("(nill)");
 				break;
 		}
 		if (format[(i + 1)] != '\0' && (format[i] == 'c' || format[i] == 'i' ||
