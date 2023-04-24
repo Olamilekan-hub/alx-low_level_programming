@@ -1,7 +1,4 @@
 #!/bin/bash
-# Compile all .c files into object files
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -c *.c
-
-# create static library from objecct iles
+gcc -Wall -Werror -Wextra -pedantic -c *.c
 ar rcs liball.a *.o
 
