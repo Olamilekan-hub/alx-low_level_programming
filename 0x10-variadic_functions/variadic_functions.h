@@ -1,4 +1,3 @@
-/* File: variadic_functions.h */
 #ifndef _VARIADIC_FUNCTIONS_H_
 #define _VARIADIC_FUNCTIONS_H_
 
