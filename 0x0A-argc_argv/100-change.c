@@ -36,5 +36,5 @@ int main(int argc, char *argv[])
 	cents = cents % 2;
 	coins += cents;
 	printf("%d\n", coins);
-	return 0;
+	return (0);
 }
