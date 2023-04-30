@@ -4,7 +4,7 @@
 /**
  * main - entry point of program
  * @argc: argument count
- * @arcv: argument vector
+ * @argv: argument vector
  *
  * Return: always 0 (success)
  */
