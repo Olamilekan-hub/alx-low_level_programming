@@ -11,20 +11,14 @@
 
 size_t print_listint(const listint_t *h)
 {
+	const listint_t *ans = h;
 	size_t i = 0;
 
-	while (h != NULL)
+	while (ans != NULL)
 	{
-		if (h == NULL)
-		{
-			printf("%s\n", "(nil)");
-		}
-		else
-		{
-			printf("%d\n", h->n);
-		}
-		h = h->next;
-		i++;
+		printf("%d\n", ans->n);
+		i += 1;
+		ans = ans->next;
 	}
 	return (i);
 }
