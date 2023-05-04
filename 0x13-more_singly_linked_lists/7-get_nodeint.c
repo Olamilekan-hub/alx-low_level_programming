@@ -3,7 +3,7 @@
 /**
  * get_nodeint_at_index - Returns the nth node of a listint_t
  * @head: pointer to the first node in the list
- * @inde: index of the node, starting at 0
+ * @index: index of the node, starting at 0
  *
  * Return: the nth node of the list or NULL if node does not exit
  */
