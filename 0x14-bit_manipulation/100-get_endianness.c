@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * get_edianness - how bits ar arranged in th LSB and MSB
+ * get_endianness - how bits ar arranged in th LSB and MSB
  *
  * Return: the edianness of the binary input
  */
