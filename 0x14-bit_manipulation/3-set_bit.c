@@ -10,14 +10,10 @@
 
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int fur = 0x01;
-
-	fur <<= index;
-
-	if (fur == 0x00)
+	if (index > (sizeof(unsigned long int) * 8) - 1)
 	{
 		return (-1);
 	}
-	*n |= fur;
+	*n |= (1ul << index);
 	return (1);
 }
