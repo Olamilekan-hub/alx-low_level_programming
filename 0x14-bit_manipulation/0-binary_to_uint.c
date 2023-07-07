@@ -9,17 +9,17 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int hold = 1, ans = 0, sp =0;
+	unsigned int hold = 1, ans = 0, sp = 0;
 
 	if (b == NULL)
 	{
-		return(0);
+		return (0);
 	}
 	while (b[sp])
 	{
 		sp++;
 	}
-	while(sp)
+	while (sp)
 	{
 		if (b[sp - 1] != '0' && b[sp - 1] != '1')
 		{
