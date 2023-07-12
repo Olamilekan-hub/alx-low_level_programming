@@ -3,8 +3,8 @@
 /**
  * read_textfile - A function that reads a text file and prints it
  *			to the POSIX standard
- * filename: pointer to the name of the file
- * letters: number of letters it should read and print
+ * @filename: pointer to the name of the file
+ * @letters: number of letters it should read and print
  *
  * Return: the result to the standard output
  */
@@ -24,7 +24,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
-	hold = (char*)malloc(letters + 1);
+	hold = (char *)malloc(letters + 1);
 	if (hold == NULL)
 	{
 		fclose(f);
@@ -48,9 +48,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		free(hold);
 		return (0);
 	}
-
 	fclose(f);
 	free(hold);
-	
 	return (bR);
 }
